@@ -4,7 +4,7 @@ import joblib
 import gdown
 import os
 
-MODEL_NAME = "rf_sales_model.pkl"
+MODEL_NAME = "rf_sales_model_19-12-2025-11-39-25.pkl"
 MODEL_URL = "https://drive.google.com/uc?id=1y6lUKBK6sEtm3lwJ2FZsg3OdCu8fJHqQ"
 
 @st.cache_resource
@@ -44,5 +44,6 @@ if uploaded_file:
 
     except Exception as e:
         st.error(f"Prediction failed: {e}")
+
 
 
