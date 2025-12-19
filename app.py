@@ -13,7 +13,7 @@ GDRIVE_FILE_ID = "1y6lUKBK6sEtm3lwJ2FZsg3OdCu8fJHqQ"
 @st.cache_resource
 def load_model():
     if not os.path.exists(MODEL_PATH):
-        url = f"https://drive.google.com/uc?id={1y6lUKBK6sEtm3lwJ2FZsg3OdCu8fJHqQ}"
+        url = f"https://drive.google.com/uc?id={GDRIVE_FILE_ID}"
         gdown.download(url, MODEL_PATH, quiet=False)
     return joblib.load(MODEL_PATH)
 
@@ -59,3 +59,4 @@ if uploaded_file:
 
     except Exception as e:
         st.error(f"Prediction failed: {e}")
+
